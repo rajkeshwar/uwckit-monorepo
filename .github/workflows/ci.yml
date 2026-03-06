@@ -28,6 +28,9 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: Build core (required for type resolution)
+        run: npm run build:core
+
       - name: Type check (core)
         run: npx tsc -p packages/code-core/tsconfig.json --noEmit
 
