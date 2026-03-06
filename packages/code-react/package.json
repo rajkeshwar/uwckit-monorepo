@@ -3,6 +3,11 @@
   "version": "1.0.0",
   "description": "UWCKit React component wrappers",
   "keywords": ["react", "components", "uwckit"],
+  "repository": {
+  "type": "git",
+    "url": "https://github.com/rajkeshwar/uwckit-monorepo.git",
+    "directory": "packages/code-react"
+  },
   "license": "MIT",
   "type": "module",
   "main": "./dist/index.cjs",

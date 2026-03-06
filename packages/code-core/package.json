@@ -4,6 +4,11 @@
   "description": "UWCKit core web components built with Lit",
   "keywords": ["web-components", "lit", "uwckit"],
   "homepage": "https://github.com/your-org/uwckit#readme",
+  "repository": {
+  "type": "git",
+    "url": "https://github.com/rajkeshwar/uwckit-monorepo.git",
+    "directory": "packages/code-core"
+  },
   "license": "MIT",
   "type": "module",
   "main": "./dist/index.cjs",
