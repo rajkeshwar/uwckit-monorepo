@@ -32,7 +32,7 @@ jobs:
         run: npx tsc -p packages/code-core/tsconfig.json --noEmit
 
       - name: Type check (vue)
-        run: npx vue-tsc -p packages/code-vue/tsconfig.json --noEmit
+        run: npx vue-tsc -p tsconfig.json --noEmit
         working-directory: packages/code-vue
 
       - name: Type check (react)
