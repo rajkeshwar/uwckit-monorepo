@@ -1,0 +1,35 @@
+{
+  "name": "@uwckit/monorepo",
+  "version": "1.0.0",
+  "private": true,
+  "description": "UWCKit component library monorepo",
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "npm run build --workspaces --if-present",
+    "build:core": "npm run build -w packages/code-core",
+    "build:angular": "npm run build -w packages/code-angular",
+    "build:react": "npm run build -w packages/code-react",
+    "build:vue": "npm run build -w packages/code-vue",
+    "dev": "npm run dev --workspaces --if-present",
+    "dev:core": "npm run dev -w packages/code-core",
+    "dev:angular": "npm run dev -w packages/code-angular",
+    "dev:react": "npm run dev -w packages/code-react",
+    "dev:vue": "npm run dev -w packages/code-vue",
+    "test": "npm run test --workspaces --if-present",
+    "lint": "npm run lint --workspaces --if-present",
+    "clean": "npm run clean --workspaces --if-present && rm -rf node_modules",
+    "changeset": "changeset",
+    "version-packages": "changeset version",
+    "release": "npm run build && changeset publish"
+  },
+  "devDependencies": {
+    "@changesets/cli": "^2.27.1",
+    "typescript": "^5.4.5"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "name": "@uwckit/code-core",
+  "version": "1.0.0",
+  "description": "UWCKit core web components built with Lit",
+  "keywords": ["web-components", "lit", "uwckit"],
+  "homepage": "https://github.com/your-org/uwckit#readme",
+  "license": "MIT",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": ["dist"],
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -p tsconfig.build.json && vite build",
+    "preview": "vite preview",
+    "test": "vitest run",
+    "lint": "eslint src --ext .ts",
+    "clean": "rm -rf dist"
+  },
+  "dependencies": {
+    "lit": "^3.1.3"
+  },
+  "devDependencies": {
+    "@types/node": "^20.12.12",
+    "vite": "^5.2.11",
+    "vite-plugin-dts": "^3.9.1",
+    "vitest": "^1.6.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

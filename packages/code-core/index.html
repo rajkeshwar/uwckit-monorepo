@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>@uwckit/code-core – Component Playground</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Segoe UI', system-ui, sans-serif;
+      background: #f8fafc;
+      color: #0f172a;
+      padding: 2rem;
+    }
+    h1 { font-size: 2rem; font-weight: 700; margin-bottom: 0.5rem; }
+    .subtitle { color: #64748b; margin-bottom: 3rem; }
+    section { margin-bottom: 3rem; }
+    h2 { font-size: 1.25rem; font-weight: 600; margin-bottom: 1.25rem; padding-bottom: 0.5rem; border-bottom: 1px solid #e2e8f0; }
+    .row { display: flex; flex-wrap: wrap; gap: 0.75rem; align-items: center; margin-bottom: 1rem; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1rem; }
+  </style>
+</head>
+<body>
+  <h1>⚡ @uwckit/code-core</h1>
+  <p class="subtitle">Lit-based web components — framework agnostic</p>
+
+  <section>
+    <h2>Buttons</h2>
+    <div class="row">
+      <uwc-button variant="primary">Primary</uwc-button>
+      <uwc-button variant="secondary">Secondary</uwc-button>
+      <uwc-button variant="danger">Danger</uwc-button>
+      <uwc-button variant="ghost">Ghost</uwc-button>
+    </div>
+    <div class="row">
+      <uwc-button size="sm">Small</uwc-button>
+      <uwc-button size="md">Medium</uwc-button>
+      <uwc-button size="lg">Large</uwc-button>
+    </div>
+    <div class="row">
+      <uwc-button loading>Loading...</uwc-button>
+      <uwc-button disabled>Disabled</uwc-button>
+    </div>
+  </section>
+
+  <section>
+    <h2>Badges</h2>
+    <div class="row">
+      <uwc-badge variant="default">Default</uwc-badge>
+      <uwc-badge variant="success" dot>Success</uwc-badge>
+      <uwc-badge variant="warning" dot>Warning</uwc-badge>
+      <uwc-badge variant="error" dot>Error</uwc-badge>
+      <uwc-badge variant="info" dot>Info</uwc-badge>
+    </div>
+  </section>
+
+  <section>
+    <h2>Cards</h2>
+    <div class="grid">
+      <uwc-card hoverable>
+        <span slot="header">Card Title</span>
+        <p>This is a hoverable card. It contains some body content and will lift on hover.</p>
+        <div slot="footer">
+          <uwc-button size="sm" variant="primary">Action</uwc-button>
+        </div>
+      </uwc-card>
+
+      <uwc-card>
+        <span slot="header">Simple Card</span>
+        <p>A regular card without hover effects. Clean and straightforward.</p>
+      </uwc-card>
+    </div>
+  </section>
+
+  <section>
+    <h2>Inputs</h2>
+    <div style="max-width: 400px; display: flex; flex-direction: column; gap: 1rem;">
+      <uwc-input label="Username" placeholder="Enter username" hint="Must be unique across the platform"></uwc-input>
+      <uwc-input label="Email" type="email" placeholder="you@example.com" required></uwc-input>
+      <uwc-input label="Password" type="password" placeholder="••••••••" error="Password must be at least 8 characters"></uwc-input>
+      <uwc-input label="Disabled" value="Cannot edit" disabled></uwc-input>
+    </div>
+  </section>
+
+  <script type="module" src="/src/index.ts"></script>
+</body>
+</html>
